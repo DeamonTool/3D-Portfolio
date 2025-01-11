@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 3vh;
+  background-color: hsl(0, 0%, 96%);
+}
+body .container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 0%, 96%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+body .container .viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0, 0%, 96%);
+  padding: 10px;
+  transition: flex 0.3s ease;
+  width: 80%;
+  height: 100%;
+}
+body .container .viewer .footer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #e0e0e0;
+  font-size: 0.7rem;
+  background: linear-gradient(135deg, hsla(0, 0%, 30%, 0.5), hsla(0, 0%, 50%, 0.5));
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body .container .viewer .footer:hover {
+  background: linear-gradient(135deg, hsla(0, 0%, 35%, 0.75), hsla(0, 0%, 25%, 0.75));
+  transform: scale(1.05);
+  color: #ffffff;
+}
+body .container .viewer .footer span {
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: hsl(5, 100%, 45%);
+}
+body .container .viewer .footer a {
+  color: inherit;
+  text-decoration: none;
+}
+body .container .model-slider, body .container .var-slider {
+  overflow-y: scroll;
+  background: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+}
+body .container .var-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20%;
+  transform: translateX(100%);
+  z-index: 1;
+}
+body .container .var-slider.open {
+  transform: translateX(0);
+}
+body .container .slider-item {
+  width: 100%;
+  height: 30vh;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 96%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+body .container .slider-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+body .container .slider-item:last-child {
+  margin: 0;
+}
+body .container model-viewer {
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 0%, 90%);
+}/*# sourceMappingURL=style.css.map */

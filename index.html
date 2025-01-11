@@ -5,37 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Portfolio</title>
+    <link rel="shortcut icon" href="logo.svg">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        model-viewer {
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+    <script src="javascript/script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <model-viewer
-        src="models/HALO360_Onyx_Static_c.glb"
-        alt="A 3D model of an object"
-        shadow-intensity="1"
-        interaction-prompt="none"
-        camera-controls
-        ar
-    ></model-viewer>
+    <div class="container">
+        <div class="viewer">
+            <model-viewer
+                id="viewer"
+                src="models/Baby_Rest_Amara_Cot_Beech_Static_c.glb"
+                alt="Main Model"
+                shadow-intensity="1"
+                camera-controls
+                interaction-prompt="none"
+                ar>
+            </model-viewer>
+            <div class="footer">
+                <a href="https://strelok-sv.artstation.com" target="_blank" rel="noopener noreferrer"><p>Created by <span>Strelok-SV</span></p></a>
+            </div>
+        </div>
+
+        <div class="model-slider" id="model-slider">
+
+        </div>
+
+        <div class="var-slider" id="var-slider">
+
+        </div>
+    </div>
 </body>
 
 </html>
