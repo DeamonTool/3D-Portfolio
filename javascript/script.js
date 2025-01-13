@@ -338,6 +338,7 @@ function generateSliderItems() {
         modelViewer.setAttribute("src", model.src);
         modelViewer.setAttribute("alt", model.alt);
         modelViewer.setAttribute("disable-zoom", "");
+        modelViewer.setAttribute("poster", "logo.svg");
 
         sliderItem.appendChild(modelViewer);
         container.appendChild(sliderItem);
@@ -382,6 +383,7 @@ function openVarSlider(index, modelAlt) {
             modelViewer.setAttribute("src", model_names[i].src);
             modelViewer.setAttribute("alt", model_names[i].alt);
             modelViewer.setAttribute("disable-zoom", "");
+            modelViewer.setAttribute("poster", "logo.svg");
 
             varItem.appendChild(modelViewer);
             varSlider.appendChild(varItem);
